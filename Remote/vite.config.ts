@@ -1,12 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
 
 // https://vite.dev/config/
 export default defineConfig({
   //base: 'http://localhost:5001/',
   build: {
-    target: "esnext"
+    target: "esnext",
   },
   plugins: [
     react(),
@@ -14,16 +14,16 @@ export default defineConfig({
       name: "remote_app",
       filename: "remoteEntry.js",
       exposes: {
-        './App': {
-          import: './src/App.tsx',
-          name: 'RemoteApp',
+        "./App": {
+          import: "./src/App.tsx",
+          name: "RemoteApp",
         },
       },
-      shared: ['react','react-dom']
-    })
+      shared: ["react", "react-dom"],
+    }),
   ],
   server: {
     port: 5001,
     strictPort: true,
-  }
-})
+  },
+});
