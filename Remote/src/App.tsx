@@ -3,12 +3,12 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
-function App() {
+function App({ appName = "Remote" }: { appName?: string }) {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      This is remote App. Very different from the Host app.
+      You're seeing this from {appName} App!
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

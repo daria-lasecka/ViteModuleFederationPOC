@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { lazy, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
-const RemoteApp = React.lazy(() => import("remote_app/App"));
+const RemoteApp = lazy(() => import("remote_app/App"));
 
 function App() {
   const [count, setCount] = useState(0);
@@ -32,7 +32,7 @@ function App() {
       </p>
 
       <div style={{ border: "1px solid red" }}>
-        <RemoteApp />
+        <RemoteApp appName="Host" />
       </div>
     </>
   );
