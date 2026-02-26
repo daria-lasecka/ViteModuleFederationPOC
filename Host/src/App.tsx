@@ -2,16 +2,16 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Home from "@/pages/Home.tsx";
 import "./App.css";
 import Navbar from "@/components/Navbar/Navbar.tsx";
-import Remote from "@/pages/Remote.tsx";
+import RemoteAppWrapper from "@/pages/RemoteAppWrapper.tsx";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <div>
+      <div className="content">
         <Routes>
           <Route index element={<Home />} />
-          <Route path="remote" element={<Remote />} />
+          <Route path="remote" element={<RemoteAppWrapper />} />
         </Routes>
       </div>
     </BrowserRouter>

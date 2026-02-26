@@ -1,13 +1,13 @@
-import { NavLink } from "react-router";
+import { NavbarContainer, StyledNavLink } from "./Styles.ts";
 
 const Navbar = () => {
   return (
-    <nav style={{ display: "flex", gap: "2rem" }}>
-      <NavLink to="/" end>
+    <NavbarContainer>
+      <StyledNavLink to="/" end>
         Home
-      </NavLink>
-      <NavLink to="/remote">Remote App Inside the Host</NavLink>
-    </nav>
+      </StyledNavLink>
+      <StyledNavLink to="/remote">Remote App Inside the Host</StyledNavLink>
+    </NavbarContainer>
   );
 };
 

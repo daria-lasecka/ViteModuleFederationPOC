@@ -1,26 +1,17 @@
-import RemoteAppWrapper from "@/pages/RemoteAppWrapper.tsx";
+import { ErrorBoundary } from "react-error-boundary";
+import { lazy } from "react";
+
+const RemoteApp = lazy(() => import("remote_app/App"));
 
 const Remote = () => {
-  const remoteAppUrl = import.meta.env.VITE_REMOTE_URL;
-
   return (
-    <div>
-      <p>Below is a page from the remote app displayed inside the host.</p>
+    <ErrorBoundary fallback={<></>}>
       <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "5px",
-        }}
+        style={{ width: "100%", border: "1px dashed #646cff", padding: "2rem" }}
       >
-        <p>To see the app separately click </p>
-        <a href={remoteAppUrl} target="_blank">
-          Here
-        </a>
+        <RemoteApp />
       </div>
-      <RemoteAppWrapper />
-    </div>
+    </ErrorBoundary>
   );
 };
 
