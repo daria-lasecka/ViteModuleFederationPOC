@@ -2,6 +2,7 @@ import { lazy, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { ErrorBoundary } from "react-error-boundary";
 
 const RemoteApp = lazy(() => import("remote_app/App"));
 
@@ -31,9 +32,11 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
 
-      <div style={{ border: "1px solid red" }}>
-        <RemoteApp appName="Host" />
-      </div>
+      <ErrorBoundary fallback={<></>}>
+        <div style={{ border: "1px solid red" }}>
+          <RemoteApp appName="Host" />
+        </div>
+      </ErrorBoundary>
     </>
   );
 }
