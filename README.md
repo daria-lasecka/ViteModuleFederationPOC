@@ -18,7 +18,10 @@ This project's purpose is to create a proof of concept Host and Remote applicati
 ```
 VITE_REMOTE_URL=http://localhost:5001
 ```
-
+* In Remote application create `.env.local` folder and add this line to it:
+```
+VITE_HOST_URL=http://localhost:5000/remote
+```
 * Go into each (host and remote) folders and run `npm install`
 * If you want to use `pnpm` to start both apps at the same time you will also need to run `npm install` in root folder
 
