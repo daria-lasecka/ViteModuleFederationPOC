@@ -1,6 +1,6 @@
 .navbar {
-    background-color: #2E2E2E; /* Slightly lighter than background */
-    border-bottom: 1px solid #1A1A1A; /* subtle bottom border */
+    background-color: #2E2E2E;
+    border-bottom: 1px solid #1A1A1A;
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -8,7 +8,7 @@
 }
 
 .navbar .nav-button {
-    color: #B0B0B0; /* default text color */
+    color: #B0B0B0;
     background-color: transparent;
     border: none;
     padding: 8px 15px;
@@ -19,25 +19,21 @@
     transition: all 0.2s ease-in-out;
 }
 
-/* Hover / Focus */
 .navbar .nav-button:hover,
 .navbar .nav-button:focus {
-    color: #FFFFFF; /* Text becomes white */
-    background-color: #3A3A3A; /* Slightly lighter background */
+    color: #FFFFFF;
+    background-color: #3A3A3A;
     outline: none;
 }
 
-/* Active / Selected Button */
 .navbar .nav-button.active {
-    color: #1DB954; /* Accent color for active state */
+    color: #646cff;
 }
 
-/* Optional: Add subtle shadow to navbar */
 .navbar {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Responsive Flex Behavior */
 .navbar .nav-button:last-child {
     margin-right: 0;
 }

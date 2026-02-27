@@ -3,6 +3,7 @@ import Home from "@/pages/Home.tsx";
 import "./App.css";
 import Navbar from "@/components/Navbar/Navbar.tsx";
 import RemoteAppWrapper from "@/pages/RemoteAppWrapper.tsx";
+import Backend from "@/pages/Backend.tsx";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div className="content">
         <Routes>
           <Route index element={<Home />} />
+          <Route path="backend" element={<Backend />} />
           <Route path="remote" element={<RemoteAppWrapper />} />
         </Routes>
       </div>

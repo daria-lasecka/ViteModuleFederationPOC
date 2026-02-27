@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
+import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -14,8 +15,8 @@ export default defineConfig({
       name: "remote_app",
       filename: "remoteEntry.js",
       exposes: {
-        "./App": {
-          import: "./src/App.tsx",
+        "./Home": {
+          import: "./src/pages/Home.tsx",
           name: "RemoteApp",
         },
       },
@@ -25,5 +26,10 @@ export default defineConfig({
   server: {
     port: 5001,
     strictPort: true,
+  },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
   },
 });

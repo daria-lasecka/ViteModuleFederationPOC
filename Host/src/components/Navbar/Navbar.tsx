@@ -6,7 +6,8 @@ const Navbar = () => {
       <StyledNavLink to="/" end>
         Home
       </StyledNavLink>
-      <StyledNavLink to="/remote">Remote App Inside the Host</StyledNavLink>
+      <StyledNavLink to="/backend">Backend Requests</StyledNavLink>
+      <StyledNavLink to="/remote">Remote App</StyledNavLink>
     </NavbarContainer>
   );
 };

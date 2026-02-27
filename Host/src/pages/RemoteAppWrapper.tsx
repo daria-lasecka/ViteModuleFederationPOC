@@ -5,20 +5,13 @@ const RemoteAppWrapper = () => {
 
   return (
     <div>
-      <p>Below is a page from the remote app displayed inside the host.</p>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "5px",
-        }}
-      >
-        <p>To see the app separately click </p>
+      <p>
+        Below is a page from the remote app displayed inside the host. To see
+        the app separately click{" "}
         <a href={remoteAppUrl} target="_blank">
-          Here
+          here
         </a>
-      </div>
+      </p>
       <Remote />
     </div>
   );
