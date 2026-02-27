@@ -1,0 +1,30 @@
+import { useState } from "react";
+
+const Home = ({ appName = "Remote" }: { appName?: string }) => {
+  const [count, setCount] = useState(0);
+  const hostAppUrlToRemotePage = import.meta.env.VITE_HOST_URL;
+
+  return (
+    <>
+      <div>You're seeing this page from {appName} App</div>
+      <p>
+        To see how this app looks from the host click{" "}
+        <a href={hostAppUrlToRemotePage} target="_blank">
+          here
+        </a>
+      </p>
+      <p>Below is some dummy data so the page looks more busy</p>
+      <h1 className="coloredHeader">Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+    </>
+  );
+};
+
+export default Home;

@@ -29,7 +29,7 @@ declare module "virtual:__federation__" {
   ): Promise<unknown>;
 }
 
-declare module "remote_app/App" {
+declare module "remote_app/Home" {
   const Component: React.ComponentType<any>;
   export default Component;
 }

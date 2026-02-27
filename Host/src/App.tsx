@@ -1,43 +1,22 @@
-import { lazy, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { BrowserRouter, Route, Routes } from "react-router";
+import Home from "@/pages/Home.tsx";
 import "./App.css";
-import { ErrorBoundary } from "react-error-boundary";
-
-const RemoteApp = lazy(() => import("remote_app/App"));
+import Navbar from "@/components/Navbar/Navbar.tsx";
+import RemoteAppWrapper from "@/pages/RemoteAppWrapper.tsx";
+import Backend from "@/pages/Backend.tsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <BrowserRouter>
+      <Navbar />
+      <div className="content">
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="backend" element={<Backend />} />
+          <Route path="remote" element={<RemoteAppWrapper />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-
-      <ErrorBoundary fallback={<></>}>
-        <div style={{ border: "1px solid red" }}>
-          <RemoteApp appName="Host" />
-        </div>
-      </ErrorBoundary>
-    </>
+    </BrowserRouter>
   );
 }
 
