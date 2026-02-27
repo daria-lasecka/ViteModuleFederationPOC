@@ -1,7 +1,9 @@
+import { Header } from "@/pages/Styled.ts";
+
 const Home = () => {
   return (
     <div>
-      <h1>This is the Host Application</h1>
+      <Header>This is the Host Application</Header>
       <p>It's a shell for a micro frontend</p>
     </div>
   );

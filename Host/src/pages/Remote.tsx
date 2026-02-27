@@ -1,13 +1,15 @@
 import { ErrorBoundary } from "react-error-boundary";
 import { lazy } from "react";
+import { useTheme } from "styled-components";
+import { RemoteAppContainer } from "@/pages/Styled.ts";
 
 const RemoteApp = lazy(() => import("remote_app/Home"));
 
 const Remote = () => {
+  const theme = useTheme();
+
   return (
-    <div
-      style={{ width: "100%", border: "1px dashed #646cff", padding: "2rem" }}
-    >
+    <RemoteAppContainer>
       <ErrorBoundary
         fallback={
           <p>
@@ -15,9 +17,9 @@ const Remote = () => {
           </p>
         }
       >
-        <RemoteApp />
+        <RemoteApp appName="Host" style={theme} />
       </ErrorBoundary>
-    </div>
+    </RemoteAppContainer>
   );
 };
 

@@ -21,6 +21,7 @@ export default defineConfig({
         },
       },
       shared: ["react", "react-dom"],
+      //"styled-components"
     }),
   ],
   server: {
