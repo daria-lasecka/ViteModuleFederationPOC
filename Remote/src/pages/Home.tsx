@@ -29,6 +29,7 @@ const Home = (props: HomeProps) => {
           <StyledLink href={hostAppUrlToRemotePage} target="_blank">
             here
           </StyledLink>
+          .
         </p>
         <p>Below is some dummy data so the page looks more busy</p>
         <StyledHeader>Vite + React</StyledHeader>
