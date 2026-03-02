@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 export const RemoteAppContainer = styled.div`
   width: 100%;
+  height: 70vh;
+  align-content: center;
   border: 1px dashed white;
-  padding: 2rem;
   border-radius: 5px;
+  padding: 2rem;
 `;
 
 export const Header = styled.h1`

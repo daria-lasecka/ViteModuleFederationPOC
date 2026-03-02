@@ -38,14 +38,14 @@ export const hostBrandATheme: Theme = {
 export const hostBrandBTheme: Theme = {
   name: "Brand B",
   colors: {
-    primary: "#00bcd4", // cyan accent
+    primary: "#00bcd4",
     primaryHover: "#00a6c2",
-    navbarBackground: "#272b30", // navbar, card backgrounds
+    navbarBackground: "#272b30",
     navbarBorder: "#111418",
     navbarLinkText: "#c0c0c0",
     white: "#ffffff",
     buttonHover: "#3a3a3a",
-    background: "#1c1f23", // slightly darker than brand A
+    background: "#1c1f23",
     text: "rgba(255, 255, 255, 0.87)",
 
     buttonBackground: "#1c1f23",

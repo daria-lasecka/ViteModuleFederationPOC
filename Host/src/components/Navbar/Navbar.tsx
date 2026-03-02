@@ -5,7 +5,6 @@ import {
   StyledNavLink,
 } from "./Styled.ts";
 import { hostBrandATheme, hostBrandBTheme, type Theme } from "@/theme.ts";
-//import { StyledButton } from "@/pages/Styled.ts";
 
 const Navbar = ({
   theme,
@@ -18,7 +17,6 @@ const Navbar = ({
     const newTheme =
       theme.name === "Brand A" ? hostBrandBTheme : hostBrandATheme;
     setTheme(newTheme);
-    console.log("toggleTheme", newTheme.name);
   };
 
   return (
