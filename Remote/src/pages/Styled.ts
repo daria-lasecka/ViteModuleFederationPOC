@@ -1,13 +1,6 @@
 import styled from "styled-components";
 
-export const RemoteAppContainer = styled.div`
-  width: 100%;
-  border: 1px dashed white;
-  padding: 2rem;
-  border-radius: 5px;
-`;
-
-export const Header = styled.h1`
+export const StyledHeader = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
   font-size: 2rem;
   margin: 0;

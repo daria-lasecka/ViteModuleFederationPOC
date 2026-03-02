@@ -17,7 +17,7 @@ const Remote = () => {
           </p>
         }
       >
-        <RemoteApp appName="Host" style={theme} />
+        <RemoteApp appName="Host" hostTheme={theme} />
       </ErrorBoundary>
     </RemoteAppContainer>
   );

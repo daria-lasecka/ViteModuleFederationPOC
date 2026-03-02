@@ -1,5 +1,11 @@
-import { NavbarContainer, StyledNavLink } from "./Styled.ts";
+import {
+  Container,
+  NavbarContainer,
+  StyledNavButton,
+  StyledNavLink,
+} from "./Styled.ts";
 import { hostBrandATheme, hostBrandBTheme, type Theme } from "@/theme.ts";
+//import { StyledButton } from "@/pages/Styled.ts";
 
 const Navbar = ({
   theme,
@@ -16,25 +22,16 @@ const Navbar = ({
   };
 
   return (
-    <NavbarContainer>
-      <StyledNavLink to="/" end>
-        Home
-      </StyledNavLink>
-      <StyledNavLink to="/backend">Backend Requests</StyledNavLink>
-      <StyledNavLink to="/remote">Remote App</StyledNavLink>
-      {/*TODO: fix this button's styles*/}
-      <button
-        onClick={toggleTheme}
-        style={{
-          marginBottom: "1rem",
-          padding: "0.5rem 1rem",
-          borderRadius: "4px",
-          cursor: "pointer",
-        }}
-      >
-        Switch Theme
-      </button>
-    </NavbarContainer>
+    <Container>
+      <NavbarContainer>
+        <StyledNavLink to="/" end>
+          Home
+        </StyledNavLink>
+        <StyledNavLink to="/backend">Backend Requests</StyledNavLink>
+        <StyledNavLink to="/remote">Remote App</StyledNavLink>
+      </NavbarContainer>
+      <StyledNavButton onClick={toggleTheme}>Switch Theme</StyledNavButton>
+    </Container>
   );
 };
 
