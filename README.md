@@ -10,7 +10,7 @@ This project's purpose is to create a proof of concept Host and Remote applicati
 * Prettier
 * @originjs/vite-plugin-federation
 * React Router
-* Material UI
+* styled-components
 
 ### Setting up local environments
 
