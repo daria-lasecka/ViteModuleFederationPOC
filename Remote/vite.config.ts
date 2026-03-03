@@ -5,7 +5,6 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
-  //base: 'http://localhost:5001/',
   build: {
     target: "esnext",
   },
@@ -20,7 +19,7 @@ export default defineConfig({
           name: "RemoteApp",
         },
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "styled-components"],
     }),
   ],
   server: {

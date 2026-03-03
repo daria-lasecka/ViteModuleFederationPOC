@@ -1,4 +1,5 @@
 import Remote from "@/pages/Remote.tsx";
+import { StyledLink } from "@/pages/Styled.ts";
 
 const RemoteAppWrapper = () => {
   const remoteAppUrl = import.meta.env.VITE_REMOTE_URL;
@@ -8,9 +9,10 @@ const RemoteAppWrapper = () => {
       <p>
         Below is a page from the remote app displayed inside the host. To see
         the app separately click{" "}
-        <a href={remoteAppUrl} target="_blank">
+        <StyledLink href={remoteAppUrl} target="_blank">
           here
-        </a>
+        </StyledLink>
+        .
       </p>
       <Remote />
     </div>
